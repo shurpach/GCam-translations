@@ -2,55 +2,102 @@
 <resources>
     <string name="hdr_processing">Unable to switch lens. There is a photo processing. Try again later.</string>
     <string name="three_cameras">Unable to switch lens. You system does not support the auxiliary rear lens.</string>
-    <string name="pref_auxbackcamera_title">Switch to the 2nd auxiliary camera</string>
     <string name="exposure_title">Exposure compensation</string>
-    <string name="sat_title">Saturation:</string>
-    <string name="sat_low">Low(default GCam)</string>
-    <string name="sat_med">Medium</string>
-    <string name="sat_high">High</string>
     <string name="pref_screen_manual_focus_title">Auxiliary camera</string>
     <string name="pref_checkbox_mf_enabled_auto">Main</string>
     <string name="pref_checkbox_mf_enabled_macro">Telephoto</string>
     <string name="pref_checkbox_mf_enabled_portrait">Wide</string>
     <string name="pref_mf_on_title">Show buttons</string>
-    <string name="pref_init_mf_title">Lens preset mode</string>
     <string name="pref_ehn_awb_off">Off</string>
     <string name="pref_ehn_awb_p2">Pixel 2</string>
     <string name="pref_ehn_awb_p3">Pixel 3</string>
-    <string name="pref_darkmode_title">Interface theme</string>
-    <string name="pref_darkmode_on">Dark</string>
-    <string name="pref_darkmode_off">Light</string>
-    <string name="pref_bitrate_title">Bitrate</string>
-    <string name="pref_bitrate_1">Auto</string>
-    <string name="pref_qjpg_title">Final JPEG quality</string>
-    <string name="pref_qjpg_90">Low - 90%</string>
-    <string name="pref_qjpg_95">Medium - 95%</string>
-    <string name="pref_qjpg_100">High - 100%</string>
     <string name="pref_frames_title">HDR+ Enhanced Frames</string>
-    <string name="pref_frames_8">Low - 8 frames</string>
+    <string name="pref_frames_9">Low - 9 frames</string>
     <string name="pref_frames_15">Medium - 15 frames</string>
     <string name="pref_frames_25">High - 25 frames</string>
-    <string name="pref_manual_option_title">Manual options</string>
-    <string name="pref_manual_mode_title">Manual mode</string>
-    <string name="pref_manual_mode_summary">Enable manual mode</string>
-    <string name="pref_shutter_title">Manual Exposure Control</string>
-    <string name="pref_shutter_summary">Enable manual shutter speed slider</string>
-    <string name="pref_iso_title">Manual ISO Control</string>
-    <string name="pref_iso_summary">Enable manual sensitivity slider (EXPERIMENTAL)</string>
-    <string name="pref_black_white_title">Monochrome</string>
-    <string name="pref_black_white_summary">If enabled, photos will be black and white</string>
     <string name="pref_ehn_awb_title">Pixel AWB in HDR+ Enhanced</string>
     <string name="pref_screen_manual_focus_summary">Enable the 2nd and the 3rd lens</string>
-    <string name="pref_max_tripod_title">Increase Tripod Capture Time</string>
-    <string name="pref_max_tripod_summary">Increases the frame count and the exposure time if steadily mounted</string>
-    <string name="libPicker_title">Custom Libs</string>
     <string name="pref_version">Info</string>
-    <string name="pref_author">GCam 6.2.030 by Urnyx05</string>
+    <string name="pref_author">GCam 7.2.010 by Urnyx05</string>
     <string name="pref_base">Based on the Google Camera version</string>
-    <string name="pref_version_number">Version : 2.3</string>
+    <string name="pref_version_number">Version : 1.9</string>
     <string name="pref_credit">This version was built by all these devs</string>
     <string name="pref_check_version">Check For Version</string>
     <string name="pref_update">Check for updates and changelog</string>
     <string name="pref_maxbright_title">Maximum screen brightness</string>
     <string name="pref_maxbright_summary">It increases screen brightness at maximum to improve visualization in sunlight</string>
+    <string name="pref_maxexpsec_title">Astro Max Exposure Time</string>
+    <string name="pref_astro_title">Enable Astrophotography</string>
+    <string name="pref_astro_summary">It lets to take better photos in low light</string>
+    <string name="pref_enable_patcher_title">Enable lib patcher</string>
+    <string name="pref_enable_patcher_summary">If disabled, it will use default values</string>
+    <string name="lib_sharpness_title">Sharpness</string>
+    <string name="lib_luma_title">Luma denoise</string>
+    <string name="lib_chroma_title">Chroma denoise</string>
+    <string name="lib_saturation_title">Saturation</string>
+    <string name="lib_contrast_title">Contrast</string>
+    <string name="lib_group_title">Lib patcher</string>
+    <string name="lib_group_summary">It increases the quality of photos</string>
+    <string name="libpatcher_main">Back camera</string>
+    <string name="libpatcher_tele">Telephoto lens</string>
+    <string name="libpatcher_wide">Wide lens</string>
+    <string name="pref_noise_hex_375">0.375 (Default Marian)</string>
+    <string name="pref_noise_hex_1000">1.0 (Default Google)</string>
+    <string name="pref_hex_1000">1.0 (Default)</string>
+    <string name="pref_default">Default</string>
+    <string name="pref_pzoom_title">Disable zoom in portrait mode</string>
+    <string name="pref_pzoom_summary">Default zoom is 1.5x</string>
+    <string name="pref_enable_libpatcher_summary">"If disabled, it will use default values.
+
+A few notes:
+1) These settings modify the final look of images, which means there is no best setting and should be adjusted according to your personal tastes after doing your own testing.
+
+2) The best way to test an option is to lower to minimum or raise to maximum and taking some test photos to see what happened.
+
+3) It is recommended to modify only the Global Multipliers until you have a general understanding of what each option does in a variety of scenes. Then once you understand, you can reset Global Multipliers to Default then tweak Wavelet Denoise Levels for a finer control of Denoise parameters to your liking.
+
+4) When Denoise parameters are lowered below 1.0, you might need to lower Sharpness to compensate for sharpening artifacts (bright halos around edges). The opposite is true if raising Denoise parameters higher than 1.0.
+
+5) This is a fast explanation of settings to edit tone curve.
+   - Dark Point: This is the leftmost starting point on the tonecurve. The Dark Point values impact the Y axis, and will move this starting point up the amount specified.
+
+   - White Point: This is the rightmost point on the tonecurve. The White Point values impact the Y axis, and move this end point down the amount specified.
+
+   - Shadows: These values impact the lower curve half. Positive values push the lower half of the curve up, and negative values pull it down.
+
+   - Highlights: These values impact the upper curve half. Like Shadows, positive values push it up, and negative values pull it down."</string>
+    <string name="lib_fine_l1_title">Level 1 (Fine Details)</string>
+    <string name="lib_fine_l2_title">Level 2 (Rough Surfaces)</string>
+    <string name="lib_fine_l3_title">Level 3 (Edges)</string>
+    <string name="lib_fine_l4_title">Level 4 (Smooth Surfaces)</string>
+    <string name="lib_wavelet_luma_title">Wavelet Luma Denoise Levels (Factors of Global)</string>
+    <string name="lib_wavelet_chroma_title">Wavelet Chroma Denoise Levels (Factors of Global)</string>
+    <string name="lib_tonecurve_title">Tone Curve</string>
+    <string name="lib_tonecurve_on_title">Enable Tone Curve</string>
+    <string name="lib_pdarks_title">Dark Point</string>
+    <string name="lib_pwhites_title">White Point</string>
+    <string name="lib_darks_title">Shadows (Lower Curve Half)</string>
+    <string name="lib_whites_title">Highlights (Upper Curve Half)</string>
+    <string name="pref_libcurve_moreinfo_title">Tap here to learn more</string>
+    <string name="pref_aemode_back_title">Back camera</string>
+    <string name="pref_aemode_front_title">Front camera</string>
+    <string name="pref_aemode_title">ISO/Exposure Time HDR+</string>
+    <string name="pref_aemode_0">Automatic</string>
+    <string name="pref_aemodef_0">Automatic</string>
+    <string name="pref_exposure_max_time_title">Max. Exposure Time</string>
+    <string name="pref_exposure_max_time_0">0.3 sec</string>
+    <string name="pref_exposure_max_time_1">0.5 sec</string>
+    <string name="pref_exposure_max_time_2">1 sec</string>
+    <string name="pref_exposure_max_time_3">3 sec</string>
+    <string name="pref_exposure_max_time_4">0.6 * Max. Exposure Time</string>
+    <string name="pref_exposure_max_time_5">Max. Exposure Time</string>
+    <string name="exp_b_title">Back camera</string>
+    <string name="exp_f_title">Front camera</string>
+    <string name="pref_aemode_category_title">ISO/Exposure Time</string>
+    <string name="pref_aemode_5">ISO 100/Time max</string>
+    <string name="pref_aemode_summary">It lets to manually adjust the values of exposure depending on the amount of light</string>
+    <string name="pref_4k_timelapse_title">4K TimeLapse</string>
+    <string name="pref_4k_timelapse_summary">Uses more storage.</string>
+    <string name="pref_google_photos_title">Enable Google Photos</string>
+    <string name="pref_google_photos_summary">Use as camera gallery Google Photos with advanced features.</string>
 </resources>
